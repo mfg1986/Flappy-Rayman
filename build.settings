@@ -1,0 +1,59 @@
+settings =
+{
+    orientation =--Orientacion de la pantalla
+    {
+        default = "portrait",--Orientacion por defecto vertical
+        supported = { "portrait" }--Orientaciones soportadas solo la vertical
+    },
+    iphone =
+    {
+        plist =
+        {
+            CFBundleDisplayName = "Flappy Ray",--Nombre de la app
+            CFBundleName = "Flappy Ray",--Nombre abreviado de la app
+            CFBundleIconFiles = {--Iconos de la app
+                "Icono/Icon.png",--57 × 57 iPhone
+                "Icono/Icon@2x.png",--114 × 114	Retina iPhone
+                "Icono/Icon-60.png",--60 × 60 iPhone
+                "Icono/Icon-60@2x.png",--120 × 120 Retina iPhone
+                "Icono/Icon-60@3x.png",--180 × 180 iPhone 6 Plus
+                "Icono/Icon-72.png",--72 × 72 iPad
+                "Icono/Icon-72@2x.png",--144 × 144	Retina iPad
+                "Icono/Icon-76.png",--76 × 76	 iPad
+                "Icono/Icon-76@2x.png",--152 × 152	Retina iPad
+                "Icono/Icon-167.png",--167 × 167	 iPad Pro
+                "Icono/Icon-Small-40.png",--40 × 40	Search/Settings — all devices
+                "Icono/Icon-Small-40@2x.png",--80 × 80	Search/Settings — all devices
+                "Icono/Icon-Small-40@3x.png",--120 × 120	Search — iPhone 6 Plus
+                "Icono/Icon-Small-50.png",--50 × 50	Search/Settings — iPad
+                "Icono/Icon-Small-50@2x.png",--	100 × 100	Search/Settings — Retina iPad
+                "Icono/Icon-Small.png",--29 × 29	Search/Settings — iPhone
+                "Icono/Icon-Small@2x.png",--58 × 58	Search/Settings — Retina iPhone
+                "Icono/Icon-Small@3x.png"--87 × 87	Settings — iPhone 6 Plus
+            }, 
+            UILaunchImages = {},  
+            UIApplicationExitsOnSuspend = true,--La aplicacion se cerrará cuando el usuario salga
+            UIPrerenderedIcon = true,--No aplicar el efecto brillo al icono
+            UIStatusBarHidden = true,--Esconder la barra de estado
+            MinimumOSVersion = "8.0",--minima version de IOS 
+        },
+    },
+     android =
+    {
+        versionCode = "10",--version de la aplicacion 1.0
+        minSdkVersion = "14",--minima version del sdk-->Android 4.0
+        usesPermissions =--permisos
+        {
+            "android.permission.WRITE_EXTERNAL_STORAGE",--permiso para escritura en almacenamiento externo
+             "android.permission.READ_EXTERNAL_STORAGE"--permiso para lectura en almacenamiento externo
+            
+        },
+        supportsScreens =--Tipos de pantalla soportadas
+        {
+            smallScreens  = true,--pantalla pequeña-->si
+            normalScreens = true,--pantalla normal-->si
+            largeScreens  = true,--pantalla grande-->si
+            xlargeScreens = false,--pantalla muy grande-->no
+        },
+    },
+}
